@@ -1,3 +1,4 @@
 dataset/*.zip
 dataset/DB*
 dataset/Ninapro*
+__pycache__/*
