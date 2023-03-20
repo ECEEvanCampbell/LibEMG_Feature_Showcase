@@ -13,10 +13,9 @@ num_subjects = 12
 feature_parameters = {"WAMP_threshold":1e-6}
 
 if __name__ == "__main__":
-    dataset_dir = 'dataset/'
-    # prepare -> get it into a format that libemg can consume it -- 
-    # a collection of .csv files
-    prepare_data(dataset_dir)
+    dataset = libemg.datasets.NinaproDB8(save_dir = ".", dataset_name="NinaproDB8")
+    dataset.convert_to_compatible()
+    
 
     fe = libemg.feature_extractor.FeatureExtractor()
     feature_list = fe.get_feature_list()
@@ -29,19 +28,11 @@ if __name__ == "__main__":
     # 12 subjects
     reps_values = [str(r) for r in range(22)]
     classes_values = [str(c) for c in range(9)]
-    filename_dic = {
-            "reps": reps_values,
-            "reps_regex": make_regex(left_bound="R", right_bound=".csv", values=reps_values),
-            "classes": classes_values,
-            "classes_regex": make_regex(left_bound="/C", right_bound="R", values=classes_values),
-        }
+    
     subject_list = [0,1,2,3,4,5,6,7,8,9,10,11]
     if not os.path.exists("results.npy"):
         for s in subject_list:
-            filename_dic["subjects"] = [str(s+1)]
-            filename_dic["subjects_regex"]  = make_regex(left_bound="s", right_bound="/C", values=filename_dic["subjects"])
-            odh = libemg.data_handler.OfflineDataHandler()
-            odh.get_data(dataset_dir, filename_dic)
+            odh = dataset.prepare_data(subjects_values=[str(s+1)])
             train_odh = odh.isolate_data("reps",list(range(20)))
             test_odh = odh.isolate_data("reps", list(range(20,22)))
             train_windows, train_metadata = train_odh.parse_windows(window_size, window_increment)
