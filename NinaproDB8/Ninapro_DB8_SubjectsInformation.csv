@@ -1,0 +1,13 @@
+Subject number,Hand,Laterality,Gender,Age,Height,Weight,Forearm circumference,Missing hand,Remaining Forearm (%),Years since amputation,Reason for the Amputation,Use of cosmetic prosthesis (Years),Use of  kinematic prosthesis (Years),Use of  myoelectric prosthesis (Years),zip files
+1,Intact,Right handed,M,27,180,75,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,DB8_s1.zip
+2,Intact,Right handed,M,26,180,78,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,DB8_s2.zip
+3,Intact,Right handed,M,34,185,120,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,DB8_s3.zip
+4,Intact,Right handed,F,29,180,74,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,DB8_s4.zip
+5,Intact,Right handed,F,34,172,76,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,DB8_s5.zip
+6,Intact,Right handed,M,24,180,64,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,DB8_s6.zip
+7,Intact,Right handed,M,26,183,84,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,DB8_s7.zip
+8,Intact,Right handed,M,29,178,75,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,DB8_s8.zip
+9,Intact,Right handed,M,24,183,98,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,DB8_s9.zip
+10,Intact,Right handed,M,21,185,68,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,DB8_s10.zip
+21,Amputee,Right Handed,M,30,180,76,27,Right,50,6,Accident,0,6,0,DB8_s11.zip
+22,Amputee,Right Handed,M,56,182,90,27,Right,50,18,Cancer (epithelioid sarcoma),0,17,2,DB8_s12.zip

@@ -1,0 +1,2 @@
+Download the Ninapro 8 dataset from http://ninapro.hevs.ch/DB8
+The individual subject zip files should be placed in the dataset folder (all zip files from DB8_s1.zip to DB8_s12.zip)
