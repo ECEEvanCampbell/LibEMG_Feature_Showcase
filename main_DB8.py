@@ -57,7 +57,7 @@ if __name__ == "__main__":
                 clf = libemg.emg_classifier.EMGClassifier()
                 clf.fit("LDA", feature_dictionary.copy())
 
-                preds = clf.run(test_features, test_metadata["classes"])
+                preds = clf.run(test_features)
                 
                 # test classifier
                 results[s,f] = om.extract_offline_metrics(metrics, test_metadata["classes"], preds[0])[metrics[0]] * 100
